@@ -1,5 +1,7 @@
 ## Build
-FROM beevelop/ionic AS ionic
+FROM node:14.17 AS ionic
+# install ionic cli
+RUN npm install -g @ionic/cli
 # Create app directory
 WORKDIR /usr/src/app
 # Install app dependencies
