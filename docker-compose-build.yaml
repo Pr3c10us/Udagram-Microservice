@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: /home/owopreeno/microservice-project-udacity/udagram-reverseproxy
+    image: pr3c10us/reverseproxy 
+  backend_user:
+    build:
+      context: /home/owopreeno/microservice-project-udacity/udagram-api-feed
+    image: pr3c10us/udacity-restapi-user
+  backend_feed:
+    build:
+      context: /home/owopreeno/microservice-project-udacity/udagram-api-user  
+    image: pr3c10us/udacity-restapi-feed
+  frontend:
+    build:
+      context: /home/owopreeno/microservice-project-udacity/udagram-frontend  
+    image: pr3c10us/udacity-frontend
